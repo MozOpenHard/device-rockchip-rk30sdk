@@ -39,9 +39,6 @@ $(patsubst ./%,%, \
  )
 endef
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/apk/flashplayer:system/app/flashplayer
-
 ########################################################
 # Face lock
 ########################################################
@@ -71,11 +68,6 @@ ifeq ($(strip $(BUILD_WITH_FACELOCK)),true)
 endif
 
 ########################################################
-#  RKUpdateService: librockchip_update_jni.so
-########################################################
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/apk/RKUpdateService/librockchip_update_jni.so:system/lib/librockchip_update_jni.so
-
-########################################################
 # Sdcard boot tool
 ########################################################
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/sdtool:root/sbin/sdtool
@@ -97,12 +89,6 @@ COPY_KL_TARGET := $(call all-kl-files-under)
 
 PRODUCT_COPY_FILES += $(foreach klName, $(COPY_KL_TARGET), \
 	$(addprefix $(LOCAL_PATH)/, $(klName)):$(addprefix system/usr/keylayout/, $(klName)))
-
-# support Chrome
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/apk/chromeLib/libchromeview.so:system/lib/libchromeview.so \
-    $(LOCAL_PATH)/apk/chromeLib/chrome-command-line:system/etc/chrome-command-line \
-    $(LOCAL_PATH)/apk/chromeLib/chrome.sh:system/bin/chrome.sh
 
 PRODUCT_COPY_FILES += \
 	device/rockchip/$(TARGET_PRODUCT)/proprietary/bin/busybox:system/bin/busybox \
