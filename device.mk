@@ -39,6 +39,8 @@ $(patsubst ./%,%, \
  )
 endef
 
+PRODUCT_COPY_FILES += \
+    device/rockchip/rk30sdk/Image:kernel
 ########################################################
 # Face lock
 ########################################################
