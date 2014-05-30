@@ -21,7 +21,7 @@ endif
 
 TARGET_PROVIDES_INIT_RC := true
 
-TARGET_NO_KERNEL := true
+TARGET_NO_KERNEL := false
 TARGET_NO_RECOVERY := false
 TARGET_ROCHCHIP_RECOVERY := true
 # to flip screen in recovery 
