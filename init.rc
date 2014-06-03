@@ -18,6 +18,7 @@ on early-init
 
     start ueventd
 
+    import /init.b2g.rc
 # create mountpoints
     mkdir /mnt 0775 root system
 
