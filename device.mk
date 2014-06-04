@@ -253,6 +253,10 @@ ifeq ($(strip $(BUILD_WITH_RK_EBOOK)),true)
         $(LOCAL_PATH)/rkbook/fonts/adobefonts/AdobeMingStd.bin:system/fonts/adobefonts/AdobeMingStd.bin
 endif
 
+# displayd
+PRODUCT_PACKAGES += \
+    displayd \
+    ddc
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
