@@ -71,6 +71,7 @@ fi
 
 	echo -n "create misc.img.... "
 	cp -a rkst/Image/misc.img rockdev/Image/misc.img	    
+	cp -a rkst/Image/misc_wipe_all.img rockdev/Image/misc_wipe_all.img
 	cp -a rkst/Image/misc_factory_test.img rockdev/Image/misc_factory_test.img	
 	echo "done."
 
