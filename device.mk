@@ -97,6 +97,8 @@ PRODUCT_COPY_FILES += \
 	device/rockchip/$(TARGET_PRODUCT)/proprietary/bin/io:system/xbin/io \
         device/rockchip/$(TARGET_PRODUCT)/init.rc:root/init.rc \
         device/rockchip/$(TARGET_PRODUCT)/mkdosfs:root/sbin/mkdosfs \
+        device/rockchip/$(TARGET_PRODUCT)/mke2fs:root/sbin/mke2fs \
+        device/rockchip/$(TARGET_PRODUCT)/e2fsck:root/sbin/e2fsck \
         device/rockchip/$(TARGET_PRODUCT)/init.$(TARGET_BOARD_HARDWARE).rc:root/init.$(TARGET_BOARD_HARDWARE).rc \
         device/rockchip/$(TARGET_PRODUCT)/init.$(TARGET_BOARD_HARDWARE).usb.rc:root/init.$(TARGET_BOARD_HARDWARE).usb.rc \
         device/rockchip/$(TARGET_PRODUCT)/ueventd.$(TARGET_BOARD_HARDWARE).rc:root/ueventd.$(TARGET_BOARD_HARDWARE).rc \
