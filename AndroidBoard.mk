@@ -13,3 +13,6 @@ endif
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
+
+################################################################
+-include u-boot/AndroidBootloader.mk
