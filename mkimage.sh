@@ -88,12 +88,12 @@ then
 		mksquashfs $OUT/system rockdev/Image/system.img -all-root >/dev/null
 	elif [ "$FSTYPE" = "ext3" ] || [ "$FSTYPE" = "ext4" ]
 	then
-		delta=5120
+		delta=20480
 		num_blocks=`du -sk $OUT/system | tail -n1 | awk '{print $1;}'`
 		num_blocks=$(($num_blocks + $delta))
 
 		num_inodes=`find $OUT/system | wc -l`
-		num_inodes=$(($num_inodes + 500))
+		num_inodes=$(($num_inodes + 2000))
 
 		ok=0
 		while [ "$ok" = "0" ]; do
