@@ -103,16 +103,16 @@ then
 		done
 		e2fsck -fy rockdev/Image/system.img >/dev/null 2>&1 || true
 
-		delta=1024
-		num_blocks=`resize2fs -P rockdev/Image/system.img 2>&1 | tail -n1 | awk '{print $7;}'`
-		rm -f rockdev/Image/system.img
-		ok=0
-		while [ "$ok" = "0" ]; do
-			genext2fs -a -d $OUT/system -b $num_blocks -N $num_inodes -m 0 rockdev/Image/system.img >/dev/null 2>&1 && \
-			tune2fs -O dir_index,filetype,sparse_super -j -L system -c -1 -i 0 rockdev/Image/system.img >/dev/null 2>&1 && \
-			ok=1 || num_blocks=$(($num_blocks + $delta))
-		done
-		e2fsck -fyD rockdev/Image/system.img >/dev/null 2>&1 || true
+		#delta=1024
+		#num_blocks=`resize2fs -P rockdev/Image/system.img 2>&1 | tail -n1 | awk '{print $7;}'`
+		#rm -f rockdev/Image/system.img
+		#ok=0
+		#while [ "$ok" = "0" ]; do
+		#	genext2fs -a -d $OUT/system -b $num_blocks -N $num_inodes -m 0 rockdev/Image/system.img >/dev/null 2>&1 && \
+		#	tune2fs -O dir_index,filetype,sparse_super -j -L system -c -1 -i 0 rockdev/Image/system.img >/dev/null 2>&1 && \
+		#	ok=1 || num_blocks=$(($num_blocks + $delta))
+		#done
+		#e2fsck -fyD rockdev/Image/system.img >/dev/null 2>&1 || true
 	else
 		mkdir -p rockdev/Image/2k rockdev/Image/4k
 		mkyaffs2image -c 2032 -s 16 -f $OUT/system rockdev/Image/2k/system.img
