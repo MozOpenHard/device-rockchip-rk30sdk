@@ -347,6 +347,7 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=adb \
+    persist.adb.tcp.port=5555 \
     persist.sys.strictmode.visual=false \
     dalvik.vm.jniopts=warnonly \
     ro.rksdk.version=RK30_ANDROID$(PLATFORM_VERSION)-SDK-v1.00.00 \
