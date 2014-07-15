@@ -1,0 +1,1 @@
+GAIA_DEVICE_TYPE=tv

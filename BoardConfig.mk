@@ -11,6 +11,8 @@ TARGET_BOARD_HARDWARE := rk30board
 TARGET_NO_BOOTLOADER := true 
 TARGET_RELEASETOOLS_EXTENSIONS := device/rockchip/rk30sdk
 
+include device/rockchip/$(TARGET_PRODUCT)/GaiaConfig.mk
+
 DEVICE_PACKAGE_OVERLAYS := device/rockchip/rk30sdk/overlay
 
 ifeq ($(TARGET_BOARD_PLATFORM),rk30xx)
