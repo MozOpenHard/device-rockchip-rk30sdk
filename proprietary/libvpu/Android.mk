@@ -42,7 +42,7 @@ LOCAL_MODULE_TAGS := optional
 include $(BUILD_MULTI_PREBUILT)
   
 include $(CLEAR_VARS)
-LOCAL_PREBUILT_LIBS := libvpu.so                
+LOCAL_PREBUILT_LIBS := librk_on2.so
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_MULTI_PREBUILT)
 
