@@ -9,5 +9,6 @@ PRODUCT_MODEL := rk30sdk
 PRODUCT_MANUFACTURER := rockchip
 
 PRODUCT_PROPERTY_OVERRIDES += \
-			ro.product.version = 1.0.0 \
+			ro.product.platform = MatchStick \
+			ro.product.version = 201401010000 \
 			ro.product.ota.host = www.rockchip.com:2300
