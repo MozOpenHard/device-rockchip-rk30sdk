@@ -61,7 +61,7 @@ def FullOTA_InstallEnd(info):
   except KeyError:
     print "warning: no rk loader bin in input target_files; not flashing loader"
     print "clear misc command"
-    info.script.ClearMiscCommand()
+    #info.script.ClearMiscCommand()
     return
 
   InstallRKLoader(loader_bin, info.input_zip, info)
@@ -73,7 +73,7 @@ def IncrementalOTA_InstallEnd(info):
   except KeyError:
     print "warning: rk loader bin missing from target; not flashing loader"
     print "clear misc command"
-    info.script.ClearMiscCommand()
+    #info.script.ClearMiscCommand()
     return
 
   try:
