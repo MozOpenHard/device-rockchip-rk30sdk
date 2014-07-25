@@ -179,4 +179,5 @@ BOARD_CODEC_ITV := true
 BOARD_USES_ALSA_AUDIO := true
 BUILD_WITH_ALSA_UTILS := true
 
-
+# Enable librecovery
+ENABLE_LIBRECOVERY := true
