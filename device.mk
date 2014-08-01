@@ -121,6 +121,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
        device/rockchip/$(TARGET_PRODUCT)/vold.fstab:system/etc/vold.fstab 
 
+PRODUCT_COPY_FILES += \
+      device/rockchip/$(TARGET_PRODUCT)/scan_result.sh:system/bin/scan_result.sh
+
 # For audio-recoard 
 PRODUCT_PACKAGES += \
     libsrec_jni

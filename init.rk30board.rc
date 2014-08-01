@@ -340,3 +340,12 @@ service iso_operate /data/bluray.sh
     disabled
     oneshot
 ##$_rbox_$_modify_$_end
+
+service apmode_scan /system/bin/scan_result.sh
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:wlan.driver.status=ok
+    start apmode_scan
