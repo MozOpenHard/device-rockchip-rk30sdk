@@ -138,6 +138,9 @@ loglevel 3
 # This is needed by any process that uses socket tagging.
     chmod 0644 /dev/xt_qtaguid
 
+    # LED blink
+    write /sys/class/leds/LED1/blinkslow 1
+
 on fs
     insmod /rk30xxnand_ko.ko
 # mount mtd partitions
