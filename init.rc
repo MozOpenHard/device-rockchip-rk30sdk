@@ -57,6 +57,10 @@ loglevel 3
 		 mkdir /mnt/BluRay 0777 system system
 #$_rbox_$_modify_$_hehua_20130204
 
+    mkdir /tmp
+    mount tmpfs tmpfs /tmp
+    chmod 1777 /tmp
+
 # Create cgroup mount point for cpu accounting
     mkdir /acct
     mount cgroup none /acct cpuacct
