@@ -1,5 +1,5 @@
 # one-file-make does not need export
-GAIA_DEVICE_TYPE=phone
+GAIA_DEVICE_TYPE=tv
 
 # sub-make needs export
 export NOFTU=1
