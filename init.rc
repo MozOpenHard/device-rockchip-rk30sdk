@@ -225,6 +225,7 @@ on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
     chmod 0660 /data/misc/wifi/wpa_supplicant.conf
     mkdir /data/local 0751 root root
+    mkdir /data/log 0777 system system
 
     # For security reasons, /data/local/tmp should always be empty.
     # Do not place files or directories in /data/local/tmp
@@ -556,3 +557,23 @@ service mdnsd /system/bin/mdnsd
 service whtest /system/bin/whtest.sh
     disabled
     oneshot
+
+service otad /system/bin/otad
+    class main
+    user root
+    group system
+
+service configd /system/bin/configd
+    class main
+    user root
+    group system
+
+service logcat /system/bin/logcat -f /data/log/main -r 1024 -n 5 -v threadtime
+    disabled
+    oneshot
+
+on property:persist.service.logcat.enable=1
+    start logcat
+
+on property:persist.service.logcat.enable=0
+    stop logcat
