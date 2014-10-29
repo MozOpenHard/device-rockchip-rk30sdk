@@ -580,3 +580,11 @@ on property:persist.service.logcat.enable=1
 
 on property:persist.service.logcat.enable=0
     stop logcat
+
+service castd /system/bin/logwrapper /system/bin/coffee /system/usr/lib/node_modules/castd/bin/castd
+    class main
+    user root
+
+service flingd /system/bin/logwrapper /system/bin/coffee /system/usr/lib/node_modules/flingd/bin/flingd
+    class main
+    user root
