@@ -9,6 +9,10 @@ PRODUCT_MODEL := rk30sdk
 PRODUCT_MANUFACTURER := rockchip
 
 PRODUCT_PACKAGES += \
+    castd \
+    flingd \
+    node \
+    coffee-script \
     configd \
     otad \
 
