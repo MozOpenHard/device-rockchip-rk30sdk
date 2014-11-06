@@ -18,6 +18,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 			persist.service.logcat.enable = 1 \
+			persist.service.logcat.flingd= 1 \
+			persist.service.logcat.castd = 0 \
 			ro.product.platform = MatchStick \
 			ro.product.version = 201401010000 \
 			ro.product.ota.host = www.rockchip.com:2300

@@ -588,3 +588,15 @@ service castd /system/bin/logwrapper /system/bin/coffee /system/usr/lib/node_mod
 service flingd /system/bin/logwrapper /system/bin/coffee /system/usr/lib/node_modules/flingd/bin/flingd
     class main
     user root
+
+on property:persist.service.castd.enable=1
+    start castd
+
+on property:persist.service.castd.enable=0
+    stop castd
+
+on property:persist.service.flingd.enable=1
+    start flingd
+
+on property:persist.service.flingd.enable=0
+    stop flingd
