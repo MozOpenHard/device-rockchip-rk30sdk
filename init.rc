@@ -582,6 +582,7 @@ on property:persist.service.logcat.enable=0
     stop logcat
 
 service castd /system/bin/logwrapper /system/bin/coffee /system/usr/lib/node_modules/castd/bin/castd
+    disabled
     class main
     user root
 
