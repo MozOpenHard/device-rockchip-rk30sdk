@@ -1,4 +1,4 @@
-KERNEL_DEFCONFIG := rk30_hotdog_ti_defconfig
+KERNEL_DEFCONFIG := marsboard_rk3066_px2_hdmi_defconfig
 
 -include kernel/AndroidKernel.mk
 
