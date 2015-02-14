@@ -563,3 +563,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
         ro.vendor.sw.version=$(VENDOR_SOFTWARE_VERSION)
 $(call inherit-product, device/rockchip/rk30_common/common.mk)
 PRODUCT_PACKAGES += gralloc.rk30board.so libyuvtorgb.so audio.primary.rk30board.so audio_policy.rk30board.so alsa.default.so acoustics.default.so
+
+PRODUCT_PACKAGES += \
+    i2cdetect \
+    i2cdump \
+    i2cget \
+    i2cset
